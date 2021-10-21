@@ -1,3 +1,9 @@
+# MAC OS
+.DS_Store
+
+# Eclipse
+.settings
+
 live/
 target/
 lib/
