@@ -39,7 +39,7 @@ class StatusServiceTest {
 	
 	private static String BASE_URL = "http://localhost:1080";
 	String base_uri = "http://localhost:8080/wsmonitor/v1";
-
+/*
 	@BeforeEach
     public void startMockServer() {
         mockServer = startClientAndServer(1080);
@@ -88,5 +88,5 @@ class StatusServiceTest {
 	    public void stopMockServer() {
 	        mockServer.stop();
 	    }
-
+*/
 }
