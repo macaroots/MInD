@@ -4,6 +4,9 @@
     <groupId>br.ifce</groupId>
     <artifactId>mind</artifactId>
     <version>0.0.1</version>
+    <properties>
+            <var.tools>/Users/gustavodamasceno/workspace/JavaLibrary/tools.jar</var.tools>
+    </properties>
     
     <dependencies>
         
@@ -31,14 +34,14 @@
             <version>5.4.0</version>
             <scope>test</scope>
         </dependency>
+       
         <dependency>
             <groupId>com.sun</groupId>
             <artifactId>tools</artifactId>
             <version>1.8</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/lib/tools.jar</systemPath>
+            <systemPath>${var.tools}</systemPath>
         </dependency>
-        
     </dependencies>
     
     <build>

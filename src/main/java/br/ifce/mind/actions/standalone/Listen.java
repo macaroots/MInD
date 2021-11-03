@@ -28,14 +28,15 @@ public class Listen extends AbstractAction {
 					new PrintWriter(clientSocket.getOutputStream(), true);
 			BufferedReader in = new BufferedReader(
 					new InputStreamReader(clientSocket.getInputStream()));
-
+			StringBuilder sb = new StringBuilder();
 
 			String inputLine;
 			// Initiate conversation with client
 			while ((inputLine = in.readLine()) != null) {
+				sb.append(inputLine + "\n");
 				if (inputLine.equals("exit"))
 					break;
-				this.getAgent().see("callAgent", inputLine.split(" "), new AbstractAction() {
+				this.getAgent().see("callAgent", sb.toString().split(" "), new AbstractAction() {
 					public void act(Object target, Object callback) {
 						out.println(this.getAgent() + " says: " + target);	
 					}

@@ -5,7 +5,7 @@
  * Released under the AGPL-3.0 License
  * https://github.com/macaroots/MInD/blob/main/LICENSE
  */
-package br.ifce.brain.test;
+package br.ifce.mind.test;
 
 import java.util.Random;
 

@@ -25,3 +25,4 @@ java -jar target/mind-0.0.1.jar -mysql
 ```
 mvn test
 ```
+#just a test
