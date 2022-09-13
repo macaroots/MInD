@@ -7,9 +7,7 @@
  */
 package br.ifce.mind.actions;
 
-import br.ifce.mind.actions.AbstractAction;
-
-public class EmptyAction extends AbstractAction {
+public class EmptyAction extends AbstractAction<Object> {
 
 	public void act(Object args, Object callback) {
 		callback(callback, null);

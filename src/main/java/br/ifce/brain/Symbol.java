@@ -7,7 +7,7 @@
  */
 package br.ifce.brain;
 
-import java.sql.Date;
+import java.util.Date;
 
 import org.json.JSONObject;
 

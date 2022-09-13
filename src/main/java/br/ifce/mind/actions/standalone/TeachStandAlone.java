@@ -19,6 +19,10 @@ import br.ifce.mind.actions.gui.AskClick;
 import br.ifce.mind.actions.gui.SeeClick;
 import br.ifce.mind.actions.gui.ListAgents;
 
+import br.ifce.mind.actions.ceed.InitAgent;
+
+
+
 /*
 Acho que o certo seria escrever tudo isso em uma biblioteca
 */
@@ -35,7 +39,7 @@ public class TeachStandAlone extends AbstractAction {
             skills.put("callAgent", new CallAgent());
             skills.put("registerAgent", new RegisterAgent());
             skills.put("config", new DefaultConfig());
-            skills.put("initAgent", new EmptyAction());
+            skills.put("initAgent", new InitAgent());
             
             skills.put("gui", new GUI());
             skills.put("seeClick", new SeeClick());

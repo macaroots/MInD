@@ -7,23 +7,26 @@
  */
 package br.ifce.brain;
 
+import java.util.Date;
 import org.json.JSONObject;
 
 public class Link {
 
 	private int id;
 	private Symbol a, b, r;
+	private Date date;
 
 	public Link() {
+        setDate(new Date(System.currentTimeMillis()));
 	}
 	public Link(Symbol r) {
-		setR(r);
+        this(null, r, null);
 	}
 	public Link(Symbol a, Symbol r) {
-		setA(a);
-		setR(r);
+        this(a, r, null);
 	}
 	public Link(Symbol a, Symbol r, Symbol b) {
+        this();
 		setA(a);
 		setR(r);
 		setB(b);
@@ -54,8 +57,14 @@ public class Link {
 	public void setId(int id) {
 		this.id = id;
 	}
+	public Date getDate() {
+		return date;
+	}
+	private void setDate(Date date) {
+		this.date = date;
+	}
 	public String toString() {
-		return getA() + " (" + getR() + ") " + getB();
+		return getA() + " (" + getR() + ") " + getB() + " - " + getDate();
 	}
 
 	public JSONObject toJSONObject() {

@@ -12,6 +12,8 @@ import br.ifce.mind.actions.AbstractAction;
 import br.ifce.brain.ListBrain;
 import br.ifce.brain.Symbol;
 
+import java.util.Arrays;
+
 public class Main extends AbstractAction {
 
 	@Override
@@ -24,7 +26,9 @@ public class Main extends AbstractAction {
         }
 		else if ("-mysql".equals(args[0])) {
             ceed.see("configMysql");
-			ceed.see("gui", args);
+            String[] newArgs = new String[args.length - 1];
+            System.arraycopy(args, 1, newArgs, 0, newArgs.length);
+            this.act(newArgs, callback);
         }        
         else if ("--console".equals(args[0])) {
 			ceed.see("console", args);

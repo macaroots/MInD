@@ -10,16 +10,13 @@ package br.ifce.mind.test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertSame;
-import static org.junit.jupiter.api.Assertions.fail;
 
 import org.junit.jupiter.api.Test;
 
-import br.ifce.brain.Symbol;
 import br.ifce.brain.ListBrain;
+import br.ifce.brain.Symbol;
 import br.ifce.mind.Agent;
 import br.ifce.mind.Ceed;
-import br.ifce.mind.Mind;
-import br.ifce.mind.NaiveMind;
 import br.ifce.mind.actions.AbstractAction;
 import br.ifce.mind.actions.Action;
 

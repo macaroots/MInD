@@ -9,7 +9,7 @@ package br.ifce.mind.actions;
 
 import br.ifce.mind.Agent;
 
-public abstract class AbstractAction implements Action {
+public abstract class AbstractAction<T> implements Action<T> {
 
 	private Agent agent;
 	

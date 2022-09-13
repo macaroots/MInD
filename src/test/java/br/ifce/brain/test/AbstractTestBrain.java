@@ -17,11 +17,11 @@ import br.ifce.brain.ListBrain;
 import br.ifce.brain.Link;
 import br.ifce.brain.Symbol;
 
-public class TestBrain {
+public class AbstractTestBrain {
 
 	Brain brain;
 	@BeforeEach
-	public void iniciar() {
+	public void setup() {
 		/**
 		 * Choose your Brain
 		 */
@@ -31,20 +31,22 @@ public class TestBrain {
 		/**/
 		//brain = new FileBrain("C:\\Users\\Renato\\Desktop\\brain_test\\");
 		brain = new ListBrain();
+		System.out.println("TESTBRAIN SETUP");
+		System.out.println(brain);
 	}
 
 	@Test
 	public void testTieReason() {
 		System.out.println("WARNING Precisa implementar TestBrain usando jUnit");
-		//System.out.println("0");
-		//System.out.println(brain);
+		System.out.println("0");
+		System.out.println(brain);
 		testTie(brain);
 		testReason(brain);
 		//System.out.println("1");
 		//System.out.println(brain);
 	}
 		
-	public static void testTie(Brain brain) {
+	public void testTie(Brain brain) {
 		for (int i = 0; i < 10; i++) {
 			Symbol a, r, b;
 			a = randomSymbol("a");
@@ -57,7 +59,7 @@ public class TestBrain {
 		//System.out.println("2");
 		//System.out.println(brain);
 	}
-	public static void testReason(Brain brain) {
+	public void testReason(Brain brain) {
 		//System.out.println("Test reason");
 		Link search = null;
 		//System.out.println("Reasoning: " + search);

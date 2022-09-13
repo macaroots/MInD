@@ -9,14 +9,14 @@ package br.ifce.mind.actions;
 
 import br.ifce.mind.Agent;
 
-public interface Action {
+public interface Action<T> {
 
 	/**
 	 * Acts following arguments
 	 * @param args
 	 * @return
 	 */
-	void act(Object args, Object callback);
+	void act(T args, Object callback);
 	void setAgent(Agent agent);
 	Agent getAgent();
 	public void callback(Object callback, Object result);
