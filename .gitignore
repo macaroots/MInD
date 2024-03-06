@@ -9,4 +9,5 @@
 live/
 target/
 lib/
+.settings
 dependency-reduced-pom.xml
